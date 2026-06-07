@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ZERO | Premium Learning Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 10% 20%, #0B0C15, #020308);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 40px 24px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* animated grain texture */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjUiIG51bU9jdGF2ZXM9IjMiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjZikiIG9wYWNpdHk9IjAuMDYiLz48L3N2Zz4=');
+            pointer-events: none;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* --- PREMIUM HEADER WITH GLASS CARD --- */
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-bottom: 48px;
+            background: rgba(12, 14, 26, 0.65);
+            backdrop-filter: blur(18px);
+            border-radius: 48px;
+            padding: 20px 32px;
+            border: 1px solid rgba(90, 210, 255, 0.2);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .logo-master {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .premium-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #5EEAD4, #A855F7, #F97316);
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px -5px rgba(94, 234, 212, 0.4);
+            transition: 0.3s ease;
+            animation: softPulse 3s infinite alternate;
+        }
+
+        @keyframes softPulse {
+            0% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.3); transform: scale(1);}
+            100% { box-shadow: 0 0 0 10px rgba(168, 85, 247, 0.2); transform: scale(1.02);}
+        }
+
+        .premium-icon i {
+            font-size: 36px;
+            color: white;
+            filter: drop-shadow(0 2px 6px black);
+        }
+
+        .logo-text h1 {
+            font-weight: 800;
+            font-size: 1.9rem;
+            background: linear-gradient(120deg, #FFFFFF, #A5F3FF, #C084FC);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: #8A99B5;
+            letter-spacing: 0.4px;
+        }
+
+        .badge-premium {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            padding: 10px 24px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+
+        .badge-premium i {
+            font-size: 28px;
+            color: #FFD966;
+        }
+
+        .badge-premium span {
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFE6A3, #FFB347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 1rem;
+        }
+
+        /* statistics row */
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background: rgba(20, 22, 40, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            padding: 20px 18px;
+            text-align: center;
+            border-bottom: 2px solid;
+            transition: all 0.25s;
+            border-image: none;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+        }
+
+        .stat-card:nth-child(1) { border-bottom-color: #3B82F6; }
+        .stat-card:nth-child(2) { border-bottom-color: #A855F7; }
+        .stat-card:nth-child(3) { border-bottom-color: #F97316; }
+        .stat-card:nth-child(4) { border-bottom-color: #10B981; }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #9CA3AF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- DYNAMIC GRID (completely reorganized) --- */
+        .section-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 32px 0 20px 0;
+        }
+
+        .section-title h2 {
+            font-weight: 600;
+            font-size: 1.7rem;
+            background: linear-gradient(135deg, #E2E8F0, #94A3B8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .section-title i {
+            color: #5EEAD4;
+        }
+
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 22px;
+            margin-bottom: 55px;
+        }
+
+        /* premium card design - new hover & morphing */
+        .resource-card {
+            background: linear-gradient(145deg, #10121E, #0A0C16);
+            border-radius: 28px;
+            padding: 24px 16px;
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(75, 85, 130, 0.25);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(2px);
+            cursor: pointer;
+        }
+
+        .resource-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+            transition: 0.5s;
+        }
+
+        .resource-card:hover::before {
+            left: 100%;
+        }
+
+        /* different vibrant hover effects per category (premium rgb shift) */
+        .resource-card[data-type="notice"]:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #FF4D6D;
+            box-shadow: 0 18px 30px -12px rgba(255, 77, 109, 0.4);
+            background: #150c14;
+        }
+        .resource-card[data-type="test"]:hover {
+            border-color: #00F0FF;
+            box-shadow: 0 18px 30px -12px rgba(0, 240, 255, 0.4);
+            transform: translateY(-8px) scale(1.02);
+            background: #0c1a22;
+        }
+        .resource-card[data-type="notes"]:hover {
+            border-color: #C084FC;
+            box-shadow: 0 18px 30px -12px rgba(192, 132, 252, 0.5);
+            transform: translateY(-8px) scale(1.02);
+            background: #130e23;
+        }
+        .resource-card[data-type="result"]:hover {
+            border-color: #FBBF24;
+            box-shadow: 0 18px 30px -12px rgba(251, 191, 36, 0.5);
+            transform: translateY(-8px) scale(1.02);
+            background: #1a1610;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            transition: 0.2s;
+        }
+
+        .resource-card:hover .card-icon {
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #E2E8F0;
+            letter-spacing: -0.2px;
+        }
+
+        .card-badge {
+            font-size: 0.7rem;
+            background: rgba(255,255,255,0.05);
+            margin-top: 12px;
+            padding: 4px 12px;
+            border-radius: 30px;
+            color: #9aa9c1;
+        }
+
+        /* new interactive footer */
+        .premium-footer {
+            margin-top: 45px;
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 48px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(94, 234, 212, 0.2);
+        }
+
+        .glow-text {
+            font-size: 0.85rem;
+            color: #cdd9ff;
+            animation: subtleGlow 4s infinite alternate;
+        }
+
+        @keyframes subtleGlow {
+            0% { text-shadow: 0 0 1px #5EEAD4; }
+            100% { text-shadow: 0 0 5px #A855F7; }
+        }
+
+        /* responsive */
+        @media (max-width: 780px) {
+            .hero-section { flex-direction: column; align-items: flex-start; }
+            .stats-row { flex-direction: column; }
+            .masonry-grid { gap: 16px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+            .card-title { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 550px) {
+            .masonry-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Hero premium new design -->
+    <div class="hero-section">
+        <div class="logo-master">
+            <div class="premium-icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="logo-text">
+                <h1>ZERO <span style="font-weight: 400; font-size: 0.9rem;">⚡</span></h1>
+                <p>made by sangam· hyper adaptive</p>
+            </div>
+        </div>
+        <div class="badge-premium">
+            <i class="fas fa-gem"></i>
+            <span>PREMIUM ACCESS • FREE° RESOURCES</span>
+            <i class="fas fa-bolt" style="color:#FFD966;"></i>
+        </div>
+    </div>
+
+    <!-- new stats bar, fresh look -->
+    <div class="stats-row">
+        <div class="stat-card"><div class="stat-number">128+</div><div class="stat-label">Live Mock Tests</div></div>
+        <div class="stat-card"><div class="stat-number">340+</div><div class="stat-label">Premium Notes</div></div>
+        <div class="stat-card"><div class="stat-number">56+</div><div class="stat-label">Result Updates</div></div>
+        <div class="stat-card"><div class="stat-number">24/7</div><div class="stat-label">Exam Support</div></div>
+    </div>
+
+    <!-- 1. NOTICES section (dynamic) -->
+    <div class="section-title">
+        <h2><i class="fas fa-bullhorn" style="margin-right: 10px;"></i> Flash Notices</h2>
+        <i class="fas fa-arrow-right"></i>
+    </div>
+    <div class="masonry-grid" id="noticesGrid"></div>
+
+    <!-- 2. LIVE TESTS + QUIZZES -->
+    <div class="section-title">
+        <h2><i class="fas fa-microphone-alt" style="margin-right: 10px;"></i> Live Tests & Quizzes</h2>
+        <i class="fas fa-chart-line"></i>
+    </div>
+    <div class="masonry-grid" id="testsGrid"></div>
+
+    <!-- 3. STUDY VAULT (notes, syllabus, PDFs) -->
+    <div class="section-title">
+        <h2><i class="fas fa-book-open" style="margin-right: 10px;"></i> Study Vault</h2>
+        <i class="fas fa-database"></i>
+    </div>
+    <div class="masonry-grid" id="notesGrid"></div>
+
+    <!-- 4. RESULTS & ANSWER KEYS -->
+    <div class="section-title">
+        <h2><i class="fas fa-chart-simple" style="margin-right: 10px;"></i> Results & Official Keys</h2>
+        <i class="fas fa-file-alt"></i>
+    </div>
+    <div class="masonry-grid" id="resultsGrid"></div>
+
+    <!-- additional row: more extra premium content -->
+    <div class="section-title">
+        <h2><i class="fas fa-rocket" style="margin-right: 10px;"></i> Extra Edge</h2>
+        <i class="fas fa-infinity"></i>
+    </div>
+    <div class="masonry-grid" id="extraGrid"></div>
+
+    <div class="premium-footer">
+        <div class="glow-text">
+            <i class="fas fa-shield-alt"></i> 24k+ students trust · daily refreshed content <i class="fas fa-sparkle"></i>
+        </div>
+        <div style="margin-top: 14px; font-size: 12px; opacity: 0.6;">©SANGAM__ZERO — next-gen preparation ecosystem</div>
+    </div>
+</div>
+
+<script>
+    // -----------------------------------------------
+    // COMPLETE NEW DATA SET (same number of links but redesigned names & categories)
+    // total 56 premium links matching original quantity but modern feel + categories
+    // -----------------------------------------------
+    const resources = [
+        // 8 NOTICES
+        { name: "📢❌ Exam date postponement", link: "https://example.com/notice1", type: "notice", icon: "fas fa-bell" },
+        { name: "🔥❌ Scholarship 2026 open", link: "https://example.com/notice2", type: "notice", icon: "fas fa-award" },
+        { name: "📋❌ Application correction window", link: "https://example.com/notice3", type: "notice", icon: "fas fa-edit" },
+        { name: "💡❌ Admit card release soon", link: "https://example.com/notice4", type: "notice", icon: "fas fa-id-card" },
+        { name: "⚠️❌ Important guideline update", link: "https://example.com/notice5", type: "notice", icon: "fas fa-shield-virus" },
+        { name: "🗓️❌ Exam city intimation", link: "https://example.com/notice6", type: "notice", icon: "fas fa-map-marker-alt" },
+        { name: "📢❌ Helpline number update", link: "https://example.com/notice7", type: "notice", icon: "fas fa-phone-alt" },
+        { name: "🎓❌ Revised syllabus notice", link: "https://example.com/notice8", type: "notice", icon: "fas fa-chalkboard" },
+
+        // LIVE TESTS (8 originally but we extend tests + quizzes => 16 total like old structure but we'll keep 8 tests + 8 quizzes in tests section)
+        { name: "🏆 Full Mock: 12th hindi", link: "https://test-book-by-sangam.github.io/zero-00/", type: "test", icon: "fas fa-flask" },
+        { name: "⚡ Full Mock: 12th english", link: "https://test-book-by-sangam.github.io/zero-0/", type: "test", icon: "fas fa-heartbeat" },
+        { name: "📊❌ UPSC Prelims Sim", link: "https://example.com/test3", type: "test", icon: "fas fa-landmark" },
+        { name: "🚀❌ Speed test: Maths", link: "https://example.com/test4", type: "test", icon: "fas fa-calculator" },
+        { name: "🧠❌ Logical Reasoning Blitz", link: "https://example.com/test5", type: "test", icon: "fas fa-brain" },
+        { name: "📈❌ English Proficiency", link: "https://example.com/test6", type: "test", icon: "fas fa-language" },
+        { name: "🎯❌ Physics Challenger", link: "https://example.com/test7", type: "test", icon: "fas fa-atom" },
+        { name: "🧪❌ Chemistry Mega test", link: "https://example.com/test8", type: "test", icon: "fas fa-vial" },
+
+        // QUIZ BOXES (8)
+        { name: "✨❌ GK Rapid fire", link: "https://example.com/quiz1", type: "test", icon: "fas fa-question-circle" },
+        { name: "💡❌ Current affairs quiz", link: "https://example.com/quiz2", type: "test", icon: "fas fa-newspaper" },
+        { name: "📖❌ Vocabulary master", link: "https://example.com/quiz3", type: "test", icon: "fas fa-spell-check" },
+        { name: "🧬❌ Biology quick quiz", link: "https://example.com/quiz4", type: "test", icon: "fas fa-dna" },
+        { name: "⚙️❌ Aptitude turbo", link: "https://example.com/quiz5", type: "test", icon: "fas fa-cogs" },
+        { name: "📐❌ Geometry sprint", link: "https://example.com/quiz6", type: "test", icon: "fas fa-shapes" },
+        { name: "🎨❌ History MCQs", link: "https://example.com/quiz7", type: "test", icon: "fas fa-scroll" },
+        { name: "🌍❌ World Geography", link: "https://example.com/quiz8", type: "test", icon: "fas fa-globe-asia" },
+
+        // PDF NOTES & SYLLABUS (16 items)
+        { name: "📕❌ NCERT short notes", link: "https://example.com/pdf1", type: "notes", icon: "fas fa-file-pdf" },
+        { name: "📗❌ Topper's handwritten", link: "https://example.com/pdf2", type: "notes", icon: "fas fa-pen-fancy" },
+        { name: "📘❌ Formula sheets", link: "https://example.com/pdf3", type: "notes", icon: "fas fa-square-root-alt" },
+        { name: "📙❌ Revision guides", link: "https://example.com/pdf4", type: "notes", icon: "fas fa-bookmark" },
+        { name: "📔❌ Mind maps", link: "https://example.com/pdf5", type: "notes", icon: "fas fa-project-diagram" },
+        { name: "📓❌ PYQ solved papers", link: "https://example.com/pdf6", type: "notes", icon: "fas fa-tasks" },
+        { name: "📖❌ Syllabus 2025-26", link: "https://example.com/syllabus1", type: "notes", icon: "fas fa-list-ul" },
+        { name: "📑❌ Chapter wise blueprint", link: "https://example.com/syllabus2", type: "notes", icon: "fas fa-chalkboard-user" },
+        { name: "📚❌ Reference book list", link: "https://example.com/book1", type: "notes", icon: "fas fa-book" },
+        { name: "📖❌ Digital library bundle", link: "https://example.com/book2", type: "notes", icon: "fas fa-layer-group" },
+        { name: "🎯❌ Flashcards essentials", link: "https://example.com/book3", type: "notes", icon: "fas fa-cards" },
+        { name: "🧾❌ Master question bank", link: "https://example.com/book4", type: "notes", icon: "fas fa-database" },
+        { name: "📦❌ Study material combo", link: "https://example.com/material1", type: "notes", icon: "fas fa-box" },
+        { name: "💎❌ Advanced problem set", link: "https://example.com/material2", type: "notes", icon: "fas fa-gem" },
+        { name: "📌❌ Exam capsule notes", link: "https://example.com/extraNotes1", type: "notes", icon: "fas fa-capsules" },
+        { name: "🗂️❌ Topic-wise tracker", link: "https://example.com/extraNotes2", type: "notes", icon: "fas fa-chart-line" },
+
+        // RESULTS & ANSWER KEYS (8 from previous pattern)
+        { name: "🏅❌ Final result: JEE", link: "https://example.com/result1", type: "result", icon: "fas fa-trophy" },
+        { name: "📊❌ NEET rank predictor", link: "https://example.com/result2", type: "result", icon: "fas fa-chart-simple" },
+        { name: "📋❌ UPSC prelims cut-off", link: "https://example.com/result3", type: "result", icon: "fas fa-chart-line" },
+        { name: "✅❌ SSC result link", link: "https://example.com/result4", type: "result", icon: "fas fa-check-circle" },
+        { name: "🔑❌ Answer key: Shift 1", link: "https://example.com/key1", type: "result", icon: "fas fa-key" },
+        { name: "🔐❌ Answer key: Shift 2", link: "https://example.com/key2", type: "result", icon: "fas fa-unlock-alt" },
+        { name: "📝❌ Official response sheet", link: "https://example.com/key3", type: "result", icon: "fas fa-file-signature" },
+        { name: "📌❌ Scorecard download", link: "https://example.com/key4", type: "result", icon: "fas fa-download" },
+
+        // EXTRA PREMIUM LINKS (8 extra just like previous extra section: support, extra tests, extra notices)
+        { name: "🎧❌ 24/7 Doubt forum", link: "https://example.com/support1", type: "extra", icon: "fas fa-headset" },
+        { name: "📞❌ Mentorship call", link: "https://example.com/support2", type: "extra", icon: "fas fa-phone-volume" },
+        { name: "🚀❌ Advanced test pack", link: "https://example.com/extraTest1", type: "extra", icon: "fas fa-rocket" },
+        { name: "💪❌ Championship series", link: "https://example.com/extraTest2", type: "extra", icon: "fas fa-fist-raised" },
+        { name: "📝❌ Extra study planner", link: "https://example.com/extraNotesPremium", type: "extra", icon: "fas fa-calendar-alt" },
+        { name: "🎯❌ Rank booster drills", link: "https://example.com/extraNotesBoost", type: "extra", icon: "fas fa-target" },
+        { name: "🌟❌ Motivational hub", link: "https://example.com/supportMotivate", type: "extra", icon: "fas fa-heart" },
+        { name: "⚙️ Custom scheduler", link: "https://example.com/customTool", type: "extra", icon: "fas fa-sliders-h" }
+    ];
+
+    // Helper to render cards by type - WITHOUT target="_blank" so links open in same tab
+    function renderCards(containerId, allowedTypes) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        const filtered = resources.filter(item => allowedTypes.includes(item.type));
+        container.innerHTML = filtered.map(item => {
+            let dataTypeAttr = '';
+            if (item.type === 'notice') dataTypeAttr = 'notice';
+            else if (item.type === 'test') dataTypeAttr = 'test';
+            else if (item.type === 'notes') dataTypeAttr = 'notes';
+            else if (item.type === 'result') dataTypeAttr = 'result';
+            else dataTypeAttr = 'notes';
+            const finalDataType = (item.type === 'extra') ? 'notes' : dataTypeAttr;
+            // IMPORTANT: removed target="_blank" so links open in same tab/window
+            return `
+                <a href="${item.link}" class="resource-card" data-type="${finalDataType}">
+                    <div class="card-icon"><i class="${item.icon}"></i></div>
+                    <div class="card-title">${item.name}</div>
+                    <div class="card-badge">${item.type === 'test' ? '⚡ live' : (item.type === 'notice' ? 'new' : 'premium')}</div>
+                </a>
+            `;
+        }).join('');
+    }
+
+    // render sections according to original distribution but modern category ordering
+    renderCards('noticesGrid', ['notice']);                     // 8 notices
+    renderCards('testsGrid', ['test']);                         // 16 tests+quizzes all assigned test type (16 items)
+    renderCards('notesGrid', ['notes']);                        // 16 notes + syllabus etc
+    renderCards('resultsGrid', ['result']);                     // 8 results & keys
+    renderCards('extraGrid', ['extra']);                         // 8 extra premium links
+
+    // small extra count check: ensure all links are displayed (total 56)
+    // Totals: notices:8, tests:16, notes:16, results:8, extra:8 = 56 perfect.
+</script>
+</body>
+</html>
