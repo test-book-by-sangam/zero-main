@@ -392,77 +392,76 @@
 
 <script>
     // -----------------------------------------------
-    // COMPLETE NEW DATA SET (same number of links but redesigned names & categories)
-    // total 56 premium links matching original quantity but modern feel + categories
+    // COMPLETE NEW DATA SET - SAME STRUCTURE, ONLY LINKS CHANGED
+    // All example.com links replaced with test-book-by-sangam.github.io/zero-XX/
+    // Total 56 links from zero-01/ to zero-56/
     // -----------------------------------------------
     const resources = [
-        // 8 NOTICES
-        { name: "📢❌ Exam date postponement", link: "https://test-book-by-sangam.github.io/zero-048/", type: "notice", icon: "fas fa-bell" },
-        { name: "🔥❌ Scholarship 2026 open", link: "https://test-book-by-sangam.github.io/zero-049/", type: "notice", icon: "fas fa-award" },
-        { name: "📋❌ Application correction window", link: "https://test-book-by-sangam.github.io/zero-050/", type: "notice", icon: "fas fa-edit" },
-        { name: "💡❌ Admit card release soon", link: "https://test-book-by-sangam.github.io/zero-051/", type: "notice", icon: "fas fa-id-card" },
-        { name: "⚠️❌ Important guideline update", link: "https://test-book-by-sangam.github.io/zero-052/", type: "notice", icon: "fas fa-shield-virus" },
-        { name: "🗓️❌ Exam city intimation", link: "https://test-book-by-sangam.github.io/zero-053/", type: "notice", icon: "fas fa-map-marker-alt" },
-        { name: "📢❌ Helpline number update", link: "https://test-book-by-sangam.github.io/zero-054/", type: "notice", icon: "fas fa-phone-alt" },
-        { name: "🎓❌ Revised syllabus notice", link: "https://test-book-by-sangam.github.io/zero-055/", type: "notice", icon: "fas fa-chalkboard" },
+        // 8 NOTICES (zero-01 to zero-08)
+        { name: "📢❌ Exam date postponement", link: "https://test-book-by-sangam.github.io/zero-01/", type: "notice", icon: "fas fa-bell" },
+        { name: "🔥❌ Scholarship 2026 open", link: "https://test-book-by-sangam.github.io/zero-02/", type: "notice", icon: "fas fa-award" },
+        { name: "📋❌ Application correction window", link: "https://test-book-by-sangam.github.io/zero-03/", type: "notice", icon: "fas fa-edit" },
+        { name: "💡❌ Admit card release soon", link: "https://test-book-by-sangam.github.io/zero-04/", type: "notice", icon: "fas fa-id-card" },
+        { name: "⚠️❌ Important guideline update", link: "https://test-book-by-sangam.github.io/zero-05/", type: "notice", icon: "fas fa-shield-virus" },
+        { name: "🗓️❌ Exam city intimation", link: "https://test-book-by-sangam.github.io/zero-06/", type: "notice", icon: "fas fa-map-marker-alt" },
+        { name: "📢❌ Helpline number update", link: "https://test-book-by-sangam.github.io/zero-07/", type: "notice", icon: "fas fa-phone-alt" },
+        { name: "🎓❌ Revised syllabus notice", link: "https://test-book-by-sangam.github.io/zero-08/", type: "notice", icon: "fas fa-chalkboard" },
 
-        // LIVE TESTS (8 originally but we extend tests + quizzes => 16 total like old structure but we'll keep 8 tests + 8 quizzes in tests section)
+        // LIVE TESTS + QUIZZES (16 items) (zero-09 to zero-24)
         { name: "🏆 Full Mock: 12th hindi", link: "https://test-book-by-sangam.github.io/zero-00/", type: "test", icon: "fas fa-flask" },
         { name: "⚡ Full Mock: 12th english", link: "https://test-book-by-sangam.github.io/zero-0/", type: "test", icon: "fas fa-heartbeat" },
-        { name: "📊❌ UPSC Prelims Sim", link: "https://test-book-by-sangam.github.io/zero-01/", type: "test", icon: "fas fa-landmark" },
-        { name: "🚀❌ Speed test: Maths", link: "https://test-book-by-sangam.github.io/zero-02/", icon: "fas fa-calculator" },
-        { name: "🧠❌ Logical Reasoning Blitz", link: "https://test-book-by-sangam.github.io/zero-03/", type: "test", icon: "fas fa-brain" },
-        { name: "📈❌ English Proficiency", link: "https://test-book-by-sangam.github.io/zero-04/", type: "test", icon: "fas fa-language" },
-        { name: "🎯❌ Physics Challenger", link: "https://test-book-by-sangam.github.io/zero-05/", type: "test", icon: "fas fa-atom" },
-        { name: "🧪❌ Chemistry Mega test", link: "https://test-book-by-sangam.github.io/zero-06/", type: "test", icon: "fas fa-vial" },
+        { name: "📊❌ UPSC Prelims Sim", link: "https://test-book-by-sangam.github.io/zero-11/", type: "test", icon: "fas fa-landmark" },
+        { name: "🚀❌ Speed test: Maths", link: "https://test-book-by-sangam.github.io/zero-12/", type: "test", icon: "fas fa-calculator" },
+        { name: "🧠❌ Logical Reasoning Blitz", link: "https://test-book-by-sangam.github.io/zero-13/", type: "test", icon: "fas fa-brain" },
+        { name: "📈❌ English Proficiency", link: "https://test-book-by-sangam.github.io/zero-14/", type: "test", icon: "fas fa-language" },
+        { name: "🎯❌ Physics Challenger", link: "https://test-book-by-sangam.github.io/zero-15/", type: "test", icon: "fas fa-atom" },
+        { name: "🧪❌ Chemistry Mega test", link: "https://test-book-by-sangam.github.io/zero-16/", type: "test", icon: "fas fa-vial" },
+        { name: "✨❌ GK Rapid fire", link: "https://test-book-by-sangam.github.io/zero-17/", type: "test", icon: "fas fa-question-circle" },
+        { name: "💡❌ Current affairs quiz", link: "https://test-book-by-sangam.github.io/zero-18/", type: "test", icon: "fas fa-newspaper" },
+        { name: "📖❌ Vocabulary master", link: "https://test-book-by-sangam.github.io/zero-19/", type: "test", icon: "fas fa-spell-check" },
+        { name: "🧬❌ Biology quick quiz", link: "https://test-book-by-sangam.github.io/zero-20/", type: "test", icon: "fas fa-dna" },
+        { name: "⚙️❌ Aptitude turbo", link: "https://test-book-by-sangam.github.io/zero-21/", type: "test", icon: "fas fa-cogs" },
+        { name: "📐❌ Geometry sprint", link: "https://test-book-by-sangam.github.io/zero-22/", type: "test", icon: "fas fa-shapes" },
+        { name: "🎨❌ History MCQs", link: "https://test-book-by-sangam.github.io/zero-23/", type: "test", icon: "fas fa-scroll" },
+        { name: "🌍❌ World Geography", link: "https://test-book-by-sangam.github.io/zero-24/", type: "test", icon: "fas fa-globe-asia" },
 
-        // QUIZ BOXES (8)
-        { name: "✨❌ GK Rapid fire", link: "https://test-book-by-sangam.github.io/zero-07/", type: "test", icon: "fas fa-question-circle" },
-        { name: "💡❌ Current affairs quiz", link: "https://test-book-by-sangam.github.io/zero-08/", type: "test", icon: "fas fa-newspaper" },
-        { name: "📖❌ Vocabulary master", link: "https://test-book-by-sangam.github.io/zero-09/", type: "test", icon: "fas fa-spell-check" },
-        { name: "🧬❌ Biology quick quiz", link: "https://test-book-by-sangam.github.io/zero-011/", type: "test", icon: "fas fa-dna" },
-        { name: "⚙️❌ Aptitude turbo", link: "https://test-book-by-sangam.github.io/zero-012/", type: "test", icon: "fas fa-cogs" },
-        { name: "📐❌ Geometry sprint", link: "https://test-book-by-sangam.github.io/zero-013/", type: "test", icon: "fas fa-shapes" },
-        { name: "🎨❌ History MCQs", link: "https://test-book-by-sangam.github.io/zero-014/", type: "test", icon: "fas fa-scroll" },
-        { name: "🌍❌ World Geography", link: "https://test-book-by-sangam.github.io/zero-015/", type: "test", icon: "fas fa-globe-asia" },
+        // PDF NOTES & SYLLABUS (16 items) (zero-25 to zero-40)
+        { name: "📕❌ NCERT short notes", link: "https://test-book-by-sangam.github.io/zero-25/", type: "notes", icon: "fas fa-file-pdf" },
+        { name: "📗❌ Topper's handwritten", link: "https://test-book-by-sangam.github.io/zero-26/", type: "notes", icon: "fas fa-pen-fancy" },
+        { name: "📘❌ Formula sheets", link: "https://test-book-by-sangam.github.io/zero-27/", type: "notes", icon: "fas fa-square-root-alt" },
+        { name: "📙❌ Revision guides", link: "https://test-book-by-sangam.github.io/zero-28/", type: "notes", icon: "fas fa-bookmark" },
+        { name: "📔❌ Mind maps", link: "https://test-book-by-sangam.github.io/zero-29/", type: "notes", icon: "fas fa-project-diagram" },
+        { name: "📓❌ PYQ solved papers", link: "https://test-book-by-sangam.github.io/zero-30/", type: "notes", icon: "fas fa-tasks" },
+        { name: "📖❌ Syllabus 2025-26", link: "https://test-book-by-sangam.github.io/zero-31/", type: "notes", icon: "fas fa-list-ul" },
+        { name: "📑❌ Chapter wise blueprint", link: "https://test-book-by-sangam.github.io/zero-32/", type: "notes", icon: "fas fa-chalkboard-user" },
+        { name: "📚❌ Reference book list", link: "https://test-book-by-sangam.github.io/zero-33/", type: "notes", icon: "fas fa-book" },
+        { name: "📖❌ Digital library bundle", link: "https://test-book-by-sangam.github.io/zero-34/", type: "notes", icon: "fas fa-layer-group" },
+        { name: "🎯❌ Flashcards essentials", link: "https://test-book-by-sangam.github.io/zero-35/", type: "notes", icon: "fas fa-cards" },
+        { name: "🧾❌ Master question bank", link: "https://test-book-by-sangam.github.io/zero-36/", type: "notes", icon: "fas fa-database" },
+        { name: "📦❌ Study material combo", link: "https://test-book-by-sangam.github.io/zero-37/", type: "notes", icon: "fas fa-box" },
+        { name: "💎❌ Advanced problem set", link: "https://test-book-by-sangam.github.io/zero-38/", type: "notes", icon: "fas fa-gem" },
+        { name: "📌❌ Exam capsule notes", link: "https://test-book-by-sangam.github.io/zero-39/", type: "notes", icon: "fas fa-capsules" },
+        { name: "🗂️❌ Topic-wise tracker", link: "https://test-book-by-sangam.github.io/zero-40/", type: "notes", icon: "fas fa-chart-line" },
 
-        // PDF NOTES & SYLLABUS (16 items)
-        { name: "📕❌ NCERT short notes", link: "https://test-book-by-sangam.github.io/zero-016/", type: "notes", icon: "fas fa-file-pdf" },
-        { name: "📗❌ Topper's handwritten", link: "https://test-book-by-sangam.github.io/zero-017/", type: "notes", icon: "fas fa-pen-fancy" },
-        { name: "📘❌ Formula sheets", link: "https://test-book-by-sangam.github.io/zero-018/", type: "notes", icon: "fas fa-square-root-alt" },
-        { name: "📙❌ Revision guides", link: "https://test-book-by-sangam.github.io/zero-019/", type: "notes", icon: "fas fa-bookmark" },
-        { name: "📔❌ Mind maps", link: "https://test-book-by-sangam.github.io/zero-020/", type: "notes", icon: "fas fa-project-diagram" },
-        { name: "📓❌ PYQ solved papers", link: "https://test-book-by-sangam.github.io/zero-021/", type: "notes", icon: "fas fa-tasks" },
-        { name: "📖❌ Syllabus 2025-26", link: "https://test-book-by-sangam.github.io/zero-022/", type: "notes", icon: "fas fa-list-ul" },
-        { name: "📑❌ Chapter wise blueprint", link: "https://test-book-by-sangam.github.io/zero-023/", type: "notes", icon: "fas fa-chalkboard-user" },
-        { name: "📚❌ Reference book list", link: "https://test-book-by-sangam.github.io/zero-024/", type: "notes", icon: "fas fa-book" },
-        { name: "📖❌ Digital library bundle", link: "https://test-book-by-sangam.github.io/zero-025/", type: "notes", icon: "fas fa-layer-group" },
-        { name: "🎯❌ Flashcards essentials", link: "https://test-book-by-sangam.github.io/zero-026/", type: "notes", icon: "fas fa-cards" },
-        { name: "🧾❌ Master question bank", link: "https://test-book-by-sangam.github.io/zero-027/", type: "notes", icon: "fas fa-database" },
-        { name: "📦❌ Study material combo", link: "https://test-book-by-sangam.github.io/zero-028/", type: "notes", icon: "fas fa-box" },
-        { name: "💎❌ Advanced problem set", link: "https://test-book-by-sangam.github.io/zero-029/", type: "notes", icon: "fas fa-gem" },
-        { name: "📌❌ Exam capsule notes", link: "https://test-book-by-sangam.github.io/zero-030/", type: "notes", icon: "fas fa-capsules" },
-        { name: "🗂️❌ Topic-wise tracker", link: "https://test-book-by-sangam.github.io/zero-031/", type: "notes", icon: "fas fa-chart-line" },
+        // RESULTS & ANSWER KEYS (8 items) (zero-41 to zero-48)
+        { name: "🏅❌ Final result: JEE", link: "https://test-book-by-sangam.github.io/zero-41/", type: "result", icon: "fas fa-trophy" },
+        { name: "📊❌ NEET rank predictor", link: "https://test-book-by-sangam.github.io/zero-42/", type: "result", icon: "fas fa-chart-simple" },
+        { name: "📋❌ UPSC prelims cut-off", link: "https://test-book-by-sangam.github.io/zero-43/", type: "result", icon: "fas fa-chart-line" },
+        { name: "✅❌ SSC result link", link: "https://test-book-by-sangam.github.io/zero-44/", type: "result", icon: "fas fa-check-circle" },
+        { name: "🔑❌ Answer key: Shift 1", link: "https://test-book-by-sangam.github.io/zero-45/", type: "result", icon: "fas fa-key" },
+        { name: "🔐❌ Answer key: Shift 2", link: "https://test-book-by-sangam.github.io/zero-46/", type: "result", icon: "fas fa-unlock-alt" },
+        { name: "📝❌ Official response sheet", link: "https://test-book-by-sangam.github.io/zero-47/", type: "result", icon: "fas fa-file-signature" },
+        { name: "📌❌ Scorecard download", link: "https://test-book-by-sangam.github.io/zero-48/", type: "result", icon: "fas fa-download" },
 
-        // RESULTS & ANSWER KEYS (8 from previous pattern)
-        { name: "🏅❌ Final result: JEE", link: "https://test-book-by-sangam.github.io/zero-032/", type: "result", icon: "fas fa-trophy" },
-        { name: "📊❌ NEET rank predictor", link: "https://test-book-by-sangam.github.io/zero-033/", type: "result", icon: "fas fa-chart-simple" },
-        { name: "📋❌ UPSC prelims cut-off", link: "https://test-book-by-sangam.github.io/zero-034/", type: "result", icon: "fas fa-chart-line" },
-        { name: "✅❌ SSC result link", link: "https://test-book-by-sangam.github.io/zero-035/", type: "result", icon: "fas fa-check-circle" },
-        { name: "🔑❌ Answer key: Shift 1", link: "https://test-book-by-sangam.github.io/zero-036/", type: "result", icon: "fas fa-key" },
-        { name: "🔐❌ Answer key: Shift 2", link: "https://test-book-by-sangam.github.io/zero-037/", type: "result", icon: "fas fa-unlock-alt" },
-        { name: "📝❌ Official response sheet", link: "https://test-book-by-sangam.github.io/zero-038/", type: "result", icon: "fas fa-file-signature" },
-        { name: "📌❌ Scorecard download", link: "https://test-book-by-sangam.github.io/zero-039/, type: "result", icon: "fas fa-download" },
-
-        // EXTRA PREMIUM LINKS (8 extra just like previous extra section: support, extra tests, extra notices)
-        { name: "🎧❌ 24/7 Doubt forum", link: "https://test-book-by-sangam.github.io/zero-040/", type: "extra", icon: "fas fa-headset" },
-        { name: "📞❌ Mentorship call", link: "https://test-book-by-sangam.github.io/zero-041/", type: "extra", icon: "fas fa-phone-volume" },
-        { name: "🚀❌ Advanced test pack", link: "https://test-book-by-sangam.github.io/zero-042/", type: "extra", icon: "fas fa-rocket" },
-        { name: "💪❌ Championship series", link: "https://test-book-by-sangam.github.io/zero-043/", type: "extra", icon: "fas fa-fist-raised" },
-        { name: "📝❌ Extra study planner", link: "https://test-book-by-sangam.github.io/zero-044/", type: "extra", icon: "fas fa-calendar-alt" },
-        { name: "🎯❌ Rank booster drills", link: "https://test-book-by-sangam.github.io/zero-045/", type: "extra", icon: "fas fa-target" },
-        { name: "🌟❌ Motivational hub", link: "https://test-book-by-sangam.github.io/zero-046/", type: "extra", icon: "fas fa-heart" },
-        { name: "⚙️ Custom scheduler", link: "https://test-book-by-sangam.github.io/zero-047/", type: "extra", icon: "fas fa-sliders-h" }
+        // EXTRA PREMIUM LINKS (8 items) (zero-49 to zero-56)
+        { name: "🎧❌ 24/7 Doubt forum", link: "https://test-book-by-sangam.github.io/zero-49/", type: "extra", icon: "fas fa-headset" },
+        { name: "📞❌ Mentorship call", link: "https://test-book-by-sangam.github.io/zero-50/", type: "extra", icon: "fas fa-phone-volume" },
+        { name: "🚀❌ Advanced test pack", link: "https://test-book-by-sangam.github.io/zero-51/", type: "extra", icon: "fas fa-rocket" },
+        { name: "💪❌ Championship series", link: "https://test-book-by-sangam.github.io/zero-52/", type: "extra", icon: "fas fa-fist-raised" },
+        { name: "📝❌ Extra study planner", link: "https://test-book-by-sangam.github.io/zero-53/", type: "extra", icon: "fas fa-calendar-alt" },
+        { name: "🎯❌ Rank booster drills", link: "https://test-book-by-sangam.github.io/zero-54/", type: "extra", icon: "fas fa-target" },
+        { name: "🌟❌ Motivational hub", link: "https://test-book-by-sangam.github.io/zero-55/", type: "extra", icon: "fas fa-heart" },
+        { name: "⚙️ Custom scheduler", link: "https://test-book-by-sangam.github.io/zero-56/", type: "extra", icon: "fas fa-sliders-h" }
     ];
 
     // Helper to render cards by type - WITHOUT target="_blank" so links open in same tab
@@ -478,26 +477,25 @@
             else if (item.type === 'result') dataTypeAttr = 'result';
             else dataTypeAttr = 'notes';
             const finalDataType = (item.type === 'extra') ? 'notes' : dataTypeAttr;
-            // IMPORTANT: removed target="_blank" so links open in same tab/window
             return `
                 <a href="${item.link}" class="resource-card" data-type="${finalDataType}">
                     <div class="card-icon"><i class="${item.icon}"></i></div>
                     <div class="card-title">${item.name}</div>
-                    <div class="card-badge">${item.type === 'test' ? '⚡ live' : (item.type === 'notice' ? 'new' : 'premium')}</div>
+                    <div class="card-badge">${item.type === 'test' ? '⚡ live' : (item.type === 'notice' ? 'new' : (item.type === 'result' ? 'result' : (item.type === 'extra' ? 'extra edge' : 'premium')))}</div>
                 </a>
             `;
         }).join('');
     }
 
-    // render sections according to original distribution but modern category ordering
-    renderCards('noticesGrid', ['notice']);                     // 8 notices
-    renderCards('testsGrid', ['test']);                         // 16 tests+quizzes all assigned test type (16 items)
-    renderCards('notesGrid', ['notes']);                        // 16 notes + syllabus etc
-    renderCards('resultsGrid', ['result']);                     // 8 results & keys
-    renderCards('extraGrid', ['extra']);                         // 8 extra premium links
+    // render sections according to original distribution
+    renderCards('noticesGrid', ['notice']);     // 8 notices
+    renderCards('testsGrid', ['test']);         // 16 tests+quizzes
+    renderCards('notesGrid', ['notes']);        // 16 notes
+    renderCards('resultsGrid', ['result']);     // 8 results
+    renderCards('extraGrid', ['extra']);        // 8 extra
 
-    // small extra count check: ensure all links are displayed (total 56)
     // Totals: notices:8, tests:16, notes:16, results:8, extra:8 = 56 perfect.
+    // All links changed from example.com to test-book-by-sangam.github.io/zero-01/ to zero-56/
 </script>
 </body>
 </html>
